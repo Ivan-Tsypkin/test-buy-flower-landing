@@ -1,0 +1,394 @@
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato-Light.woff) format("woff"),
+          url(../fonts/Lato-Light.woff2) format("woff2");
+    font-weight: 300;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F5;
+    font-family: 'Garamond', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #161616;
+}
+
+.page__content {
+    max-width: 1140px;
+    width: 100%;
+}
+
+
+/* Шапка */
+
+
+.phone-icon {
+    background-image: url("../img/icon-phone.svg");
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.phone-number {
+    color: #B8926B;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #161616;
+}
+
+.nav-link:hover {
+    color: #161616;
+}
+
+.nav-item::before {
+    opacity: 0;
+    transition: all 0.2s linear;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    content: "";
+    background-image: url("../img/small-top-line.svg");
+}
+
+.nav-item:hover::before {
+    opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+    .logo_header {
+        position: absolute;
+        top: 24px;
+        left: calc(50% - 60px);
+        max-width: fit-content;
+    }
+
+    .phone-number-wrapper {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        max-width: fit-content;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .phone-number {
+        display: none;
+    }
+}
+
+
+/* Заказ */
+
+
+.order__title-wrapper {
+    position: relative;
+}
+
+.star-orbit-image {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+}
+
+.order__title {
+    font-size: 59px;
+    line-height: 66px;
+}
+
+@media screen and (max-width: 992px) {
+    .order__title {
+        font-size: 42px;
+        line-height: 47px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .order__title {
+        font-size: 25px;
+        line-height: 28px;
+    }
+}
+
+.order__text {
+    font-family: 'Lato';
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+@media screen and (max-width: 992px) {
+    .order__text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.order__make-order-btn {
+    height: 59px;
+    width: 210px;
+    background: #69766D;
+    color: #F6F6F5;
+    border-radius: 0;
+}
+
+.social-icon {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.social-icon path, .social-icon circle {
+    transition: all 0.2s linear;
+}
+
+.social-icon:hover path  {
+    fill: #B8926B;
+}
+
+.social-icon:hover circle  {
+    stroke: #B8926B;
+}
+
+@media screen and (max-width: 992px) {
+    .order__social-icon-wrapper {
+        display: none!important;
+    }
+
+    .order__image-wrapper {
+        display: none!important;
+    }
+
+    .order__make-order {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .star-orbit-image {
+        display: none;
+    }
+
+    .order__make-order {
+        margin-top:  64px;
+    }
+}
+
+
+/* Путь к букету */
+
+
+.step { 
+    position: relative;
+    max-width: 180px;
+}
+
+@media screen and (max-width: 992px) {
+    .step {
+        max-width: 140px;
+        padding-top: 24px;
+    }
+}
+
+.way-to-flowers__title {
+    position: relative;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+@media screen and (max-width: 992px) {
+    .way-to-flowers__title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .way-to-flowers__title {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+.way-to-flowers__title::before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 70px;
+    height: 2px;
+    content: "";
+    background-image: url("../img/small-top-line.svg");
+}
+
+.step__title {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+.step__text {
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+}
+
+.track {
+    position: absolute;
+    background-image: url("../img/track-up.svg");
+    background-size: cover;
+    width: 120px;
+    height: 24px;
+}
+
+@media screen and (max-width: 992px) {
+    .track {
+        display: none;
+    }
+}
+
+.track-up {
+    top: 0;
+    left: 130px;
+}
+
+.track-down {
+    top: 50px;
+    left: 130px;
+    transform: rotate(192deg);
+}
+
+
+/* Модальное окно обратной связи */
+
+
+@media screen and (max-width: 576px) {
+    .modal-dialog_callback {
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+    }
+
+    .modal-content_callback {
+        height: 100vh;
+    }
+}
+
+.modal-content {
+    background: #F6F6F5;
+    border-radius: 0;
+}
+
+.modal-title-wrapper {
+    position: relative;
+    z-index: 0;
+}
+
+.modal-title-wrapper__star-orbit-image {
+    position: absolute;
+    width: 200px;
+    top: -50px;
+    left: -50px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 360px) {
+    .modal-title-wrapper__star-orbit-image {
+        display: none;
+    }
+}
+
+.modal-title {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.form-label {
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: #161616;
+}
+
+.form-control {
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0em;
+    border-radius: 0;
+    color: #161616;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    border: 1px solid #D8BFA9;
+}
+
+.form-text {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0em;
+    color: #69766D;
+}
+
+
+/* Модальное окно меню */
+
+.logo_menu {
+    position: relative;
+    top: -30px;
+}
+
+.modal-content_menu {
+    background: #D8BFA9;
+}
+
+.nav-link_white-text {
+    color: #F6F6F5;
+}
+
+.btn-close_menu {
+    filter: invert(1);
+    opacity: 1;
+}
+
+.social-icon_white path {
+    fill: #F6F6F5;
+}
+
+.social-icon_white circle {
+    stroke: #F6F6F5;
+}
+
+.social-icon_white:hover path {
+    fill: #161616;
+}
+
+.social-icon_white:hover circle {
+    stroke: #161616;
+}
